@@ -1,4 +1,9 @@
 #include "shell.h"
+/**
+ * execute_command - executes command given by the user
+ *
+ * @cmd: command entered
+ */
 void execute_command(char *cmd)
 {
 	pid_t pid;
@@ -39,6 +44,6 @@ void execute_command(char *cmd)
 	}
 	else
 	{
-		wait(&status)
+		wait(&status);
 	}
 }

@@ -1,5 +1,9 @@
 #include "shell.h"
-
+/**
+ * read_command - reads command given by the user
+ *
+ * Return: cmdptr
+ */
 char *read_command()
 {
 	char *cmdptr = NULL;
