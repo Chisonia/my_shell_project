@@ -2,20 +2,23 @@
 /**
  * read_command - reads command given by the user
  *
- * Return: cmdptr
+ * Return: input
  */
 char *read_command()
 {
-	char *cmdptr = NULL;
+	char *input = NULL;
 	size_t len = 0;
 	ssize_t read;
 
-	read = getline(&cmdptr, &len, stdin);
-	if (read == -1)
+	read = getline(&input, &len, stdin);
+	if (read == EOF)
 	{
 		perror("getline");
 		exit(EXIT_FAILURE);
 	}
-	cmdptr[strcspn(cmdptr, "\n")] = 0;
-	return (cmdptr);
+	if (input[read - 1] == '\n')
+	{
+		input[read - 1] = '\0';
+	}
+	return (input);
 }
