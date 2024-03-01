@@ -34,7 +34,6 @@ char **tokenize(char *cmd)
 			free(tokens);
 			exit(EXIT_FAILURE);
 		}
-		printf("%s\n", token);
 		token = strtok(NULL, delim);
 		token_count++;
 	}

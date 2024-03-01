@@ -8,7 +8,6 @@ int main(void)
 {
 	char *cmd;
 	char **tokens;
-	int i;
 
 	while (1)
 	{

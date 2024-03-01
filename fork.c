@@ -7,7 +7,8 @@ void execute_command(char **tokens)
 {
 	pid_t pid;
 	int status;
-	char *path, full_path[MAX_PATH_LENGTH];
+	char *path_token; 
+	char full_path[MAX_PATH_LENGTH];
 	char *path = getenv("PATH");
 
 	if (path == NULL)
